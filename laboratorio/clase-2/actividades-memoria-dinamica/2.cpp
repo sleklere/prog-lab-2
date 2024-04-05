@@ -102,33 +102,8 @@ int main()
     }
   }
 
-  ////////////////////////////////////////////////
-
-  // volver a iterar y calcular y guardar numero/s con mayores repeticiones
-  // int posNumMayRep = buscarPosMaximo(nRep, n);
-  // int cantNumMaxRep = buscarCantMaximos(vec, nRep, n, posNumMayRep);
-
-  mostrarVector(vec, n);
-  // cout << "El numero con mayores repeticiones es: " << vec[repeticiones[0]] << " (" << repeticiones[1] << " repeticiones)" << endl;
-
-  // cout << "Los numeros repetidos son: ";
-  // for (int i = 0; i < n; i++)
-  // {
-  //   if (nRep[i] == nRep[posNumMayRep] && vec[i] != vec[posNumMayRep])
-  //   {
-  //     cout << vec[i] << ", ";
-  //   }
-  // }
-  // cout << vec[posNumMayRep] << "." << endl;
-
-  // cout << "El numero con mayores repeticiones es: " << vec[posNumMayRep] << " (" << nRep[posNumMayRep] << " repeticiones)" << endl;
-  // cout << "El numero con mayores repeticiones es: " << vec[posNumMayRep] << endl;
-
   delete[] vec;
   delete[] nRep;
 
   return 0;
 }
-
-// crear vector con numeros al azar
-// buscar si hay repetidos y cuantas veces cada uno
