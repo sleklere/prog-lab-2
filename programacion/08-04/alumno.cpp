@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 #include "fecha.h"
-#include "fecha.cpp"
+// #include "fecha.cpp"
 #include <string.h>
 
 // getters and setters para cada propiedad (los puristas estarían en desacuerdo)
