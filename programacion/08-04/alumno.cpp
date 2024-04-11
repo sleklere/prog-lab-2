@@ -4,6 +4,18 @@ using namespace std;
 #include "fecha.cpp"
 #include <string.h>
 
+// getters and setters para cada propiedad (los puristas estarían en desacuerdo)
+// cout's van por fuera de la clase
+// Fecha obj; -> solo es valido si no hay un constructor declarado o el unico que hay es igual al implícito (Fecha();)
+// Segun los puristas, si un valor numerico no es usado para calculos aritmeticos deberia ser de tipo char o string
+// la edad es un ejemplo de datos que no deberian ser propiedades (en este caso porque es un dato que se sabe que va a cambiar, en cambio se guarda la fecha de nacimiento)
+// composicion -> "usar obj de una clase como prop de otra clase"
+// cadenas de char -> usar variables de tipo constante
+//      - recibir str literal
+//      - mas seguro al momento de usar strcpy()
+//      - ESPECIALMENTE importante para los getters (encapsulamiento)
+// Los valores por omisión van en la implementación
+
 class Persona
 {
 private:
@@ -32,6 +44,7 @@ public:
   void Cargar();
 };
 
+// : -> operador "scope"
 class Alumno : public Persona
 {
 private:
