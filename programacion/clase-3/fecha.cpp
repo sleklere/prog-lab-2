@@ -2,106 +2,70 @@
 using namespace std;
 #include "fecha.h"
 
-int Fecha::getDia()
-{
-  return _dia;
-};
-int Fecha::getMes()
-{
-  return _mes;
-};
-int Fecha::getAnio()
-{
-  return _anio;
-};
-bool Fecha::setDia(int dia)
-{
-  if (dia > 0 && dia <= 31)
-  {
+int Fecha::getDia() { return _dia; };
+int Fecha::getMes() { return _mes; };
+int Fecha::getAnio() { return _anio; };
+bool Fecha::setDia(int dia) {
+  if (dia > 0 && dia <= 31) {
     _dia = dia;
     return true;
-  }
-  else
-  {
+  } else {
     return false;
   }
 };
-bool Fecha::setMes(int mes)
-{
-  if (mes > 0 && mes <= 12)
-  {
+bool Fecha::setMes(int mes) {
+  if (mes > 0 && mes <= 12) {
     _mes = mes;
     return true;
-  }
-  else
-  {
+  } else {
     return false;
   }
 };
-bool Fecha::setAnio(int anio)
-{
-  if (anio > 1900 && anio <= 2024)
-  {
+bool Fecha::setAnio(int anio) {
+  if (anio > 1900 && anio <= 2024) {
     _anio = anio;
     return true;
-  }
-  else
-  {
+  } else {
     return false;
   }
 };
-void Fecha::Mostrar()
-{
-  cout << "Fecha [AA/MM/DD]: " << _anio << "/" << _mes << "/" << _dia;
+void Fecha::Mostrar() {
+  cout << "Fecha [DD/MM/AA]: " << _dia << "/" << _mes << "/" << _anio;
 }
-void Fecha::Cargar()
-{
+void Fecha::Cargar() {
   int dia, mes, anio;
   bool bD = 0, bM = 0, bA = 0;
-  while (!bD)
-  {
+  while (!bD) {
     cout << "Dia: ";
     cin >> dia;
-    if (setDia(dia))
-    {
+    if (setDia(dia)) {
       bD = 1;
-    }
-    else
-    {
+    } else {
       cout << "Dia invalido." << endl;
     }
   }
-  while (!bM)
-  {
+  while (!bM) {
     cout << "Mes: ";
     cin >> mes;
-    if (setMes(mes))
-    {
+    if (setMes(mes)) {
       bM = 1;
-    }
-    else
-    {
+    } else {
       cout << "Mes invalido." << endl;
     }
   }
-  while (!bA)
-  {
+  while (!bA) {
     cout << "Anio: ";
     cin >> anio;
-    if (setAnio(anio))
-    {
+    if (setAnio(anio)) {
       bA = 1;
-    }
-    else
-    {
+    } else {
       cout << "Anio invalido." << endl;
     }
   }
 }
 
 // Constructor predeterminado. Elegí que cree el objeto con la fecha actual.
-Fecha::Fecha(int dia, int mes, int anio)
-{
+Fecha::Fecha(int dia, int mes, int anio) {
   setDia(dia);
   setMes(mes);
   setAnio(anio);

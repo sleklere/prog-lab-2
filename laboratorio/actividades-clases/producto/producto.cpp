@@ -59,7 +59,7 @@ void mostrarProducto(Producto prod) {
 
   cout << "Nombre: " << prod.getNombre() << endl;
   cout << "Precio: " << precio << endl;
-  if (stock <= minStock) {
+  if (stock <= minStock && tipo == 1) {
     cout << "Hay que reponer el stock del producto" << endl;
   }
   cout << "Stock: " << stock << endl;
