@@ -18,6 +18,7 @@ bool Proveedor::setCUIL(const char* CUIL) {
   if (CUIL == nullptr) {
     return false;
   }
+  cout << sizeof CUIL;
   if (strlen(CUIL) == 11) {
     strcpy(_CUIL, CUIL);
     return true;
@@ -42,7 +43,8 @@ bool Proveedor::setCondicionPago(char condicionPago) {
 }
 Proveedor::Proveedor(const char* CUIL = "203902805", int tipoProducto = 7,
                      char condicion = 'a') {
-  strcpy(_CUIL, CUIL);
+  // strcpy(_CUIL, CUIL);
+  setCUIL(CUIL);
   _tipoProducto = tipoProducto;
   _condicionPago = condicion;
 }
