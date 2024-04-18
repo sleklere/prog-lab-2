@@ -27,6 +27,8 @@ public:
   bool setCUIL(const char* CUIL);
   bool setTipoProducto(int tipoProducto);
   bool setCondicionPago(char condicionPago);
+  void Cargar();
+  void Mostrar();
 };
 
 class Docente : public Persona {
