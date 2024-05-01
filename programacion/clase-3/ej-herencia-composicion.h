@@ -55,15 +55,24 @@ private:
 	int _codPostal;
 	char _localidad[20];
 	int _piso;
+
+public:
+	void Cargar();
+	void Mostrar();
 };
 
 class Inmueble
 {
 private:
+	Direccion direccion;
 	Fecha _fechaIngreso;
 	Fecha _fechaOperacion;
 	int _superficieTotal;
 	int tipoOperacion;
+
+public:
+	void Cargar();
+	void Mostrar();
 };
 
 class Residencia : Inmueble

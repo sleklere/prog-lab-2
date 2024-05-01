@@ -87,6 +87,13 @@ Docente::Docente(const char* legajo, const char* cargo, Fecha fechaIngreso) {
   _fechaIngreso = fechaIngreso;
 }
 
+// 2
+		
+void Inmueble::Cargar(){
+	Direccion::Cargar();
+	
+}
+		
 int main() {
   Empleado emp1;
   Proveedor prov1;
