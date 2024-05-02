@@ -55,6 +55,10 @@ private:
 	int _codPostal;
 	char _localidad[20];
 	int _piso;
+
+public:
+	void Cargar();
+	void Mostrar();
 };
 
 class Inmueble
@@ -63,33 +67,61 @@ private:
 	Fecha _fechaIngreso;
 	Fecha _fechaOperacion;
 	int _superficieTotal;
-	int tipoOperacion;
+	int _tipoOperacion;
+
+public:
+	void Cargar();
+	void Mostrar();
 };
 
 class Residencia : Inmueble
 {
 private:
 	int _cantAmbientes;
+
+public:
+	int getCantAmbientes();
+	void setCantAmbientes(int cantidad);
+	void Cargar();
+	void Mostrar();
 };
 
 class Casa : Residencia
 {
 private:
 	int _superficieConstruida;
+
+public:
+	int getSuperficieConstruida();
+	void setSuperficieConstruida(int superficie);
+	void Cargar();
+	void Mostrar();
 };
 
 class Departamento : Residencia
 {
 private:
 	bool _instComplementarias;
+
+public:
+	void Cargar();
+	void Mostrar();
 };
 
 class LocalComercial : Inmueble
 {
 	int _zona;
+
+public:
+	void Cargar();
+	void Mostrar();
 };
 
 class Terreno : Inmueble
 {
 	char _poseeMejoras;
+
+public:
+	void Cargar();
+	void Mostrar();
 };
