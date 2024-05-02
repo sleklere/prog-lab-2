@@ -59,11 +59,16 @@ private:
 public:
 	void Cargar();
 	void Mostrar();
+
+public:
+	void Cargar();
+	void Mostrar();
 };
 
 class Inmueble
 {
 private:
+	Direccion direccion;
 	Fecha _fechaIngreso;
 	Fecha _fechaOperacion;
 	int _superficieTotal;
